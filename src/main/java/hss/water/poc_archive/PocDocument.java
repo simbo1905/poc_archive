@@ -8,12 +8,21 @@ import java.util.Date;
 
 @Entity
 @Table(name = "PocDocuments")
-public class PocDocuments {
+public class PocDocument {
     @Id
     @GeneratedValue
     private Long id;
 
-    public PocDocuments() {
+    String firstName;
+    String middleName;
+    String lastName;
+    String taxId;
+    String cifNo;
+    String uhId;
+    Date documentDate;
+    String type;
+
+    public PocDocument() {
     }
 
     public Long getId() {
@@ -80,10 +89,6 @@ public class PocDocuments {
         this.type = type;
     }
 
-    String firstName;
-    String middleName;
-    String lastName;
-
     public String getTaxId() {
         return taxId;
     }
@@ -92,9 +97,4 @@ public class PocDocuments {
         this.taxId = taxId;
     }
 
-    String taxId;
-    String cifNo;
-    String uhId;
-    Date documentDate;
-    String type;
 }
